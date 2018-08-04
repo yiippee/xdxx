@@ -1,0 +1,19 @@
+
+/*中间描述文字样式*/
+.centerContent{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 600rpx;
+
+}
+
+/*视频*/
+.content-multimedia {
+  display: inline-block;
+  margin-top: 20rpx;
+  justify-content: center;
+  align-items: center;
+  max-width:100%;
+  height: auto;
+  min-width: 80%;
+}

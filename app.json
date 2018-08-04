@@ -1,0 +1,42 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/hot/hot",
+    "pages/word/word",
+    "pages/image/image",
+    "pages/voice/voice",
+    "pages/video/video",
+    "pages/detail/detail"
+  ],
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#eb4f38",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+    {
+        "pagePath": "pages/hot/hot",
+        "text": "热点",
+        "iconPath": "image/hotN.png",
+        "selectedIconPath": "image/hotS.png"
+    },
+      {
+        "pagePath": "pages/word/word",
+        "text": "段子",
+        "iconPath": "image/wordN.png",
+        "selectedIconPath": "image/wordS.png"
+      },
+      {
+        "pagePath": "pages/image/image",
+        "text": "图片",
+        "iconPath": "image/imageN.png",
+        "selectedIconPath": "image/imageS.png"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#9A32CD",
+    "navigationBarTextStyle":"white"
+  }
+}
