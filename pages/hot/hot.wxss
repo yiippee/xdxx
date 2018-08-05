@@ -8,12 +8,23 @@
 }
 
 /*视频*/
-.content-multimedia {
-  display: inline-block;
+.content-multimedia{
+  display: inline-flex;
   margin-top: 20rpx;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
   max-width:100%;
   height: auto;
-  min-width: 80%;
+}
+
+.controls {
+  position: relative;
+  display: flex;
+}
+
+.play, .pause {
+  flex: 1;
+  height: 100%;
+  text-align: center;
+  line-height: 50px;
 }

@@ -1,9 +1,11 @@
 /*整体view样式*/
 .containsView{
+  display: flex;
   padding: 15rpx 15rpx 15rpx 15rpx;
   margin-top: 15rpx;
   margin-bottom: 15rpx;
   background-color: white;
+  flex-direction:column;
 }
 /*头部整体样式*/
 .topContainsView{

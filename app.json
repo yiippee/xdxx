@@ -22,15 +22,15 @@
     },
       {
         "pagePath": "pages/word/word",
-        "text": "段子",
-        "iconPath": "image/wordN.png",
-        "selectedIconPath": "image/wordS.png"
+        "text": "发布",
+        "iconPath": "image/publishN.png",
+        "selectedIconPath": "image/publishS.png"
       },
       {
         "pagePath": "pages/image/image",
-        "text": "图片",
-        "iconPath": "image/imageN.png",
-        "selectedIconPath": "image/imageS.png"
+        "text": "我的",
+        "iconPath": "image/mineN.png",
+        "selectedIconPath": "image/mineS.png"
       }
     ]
   },

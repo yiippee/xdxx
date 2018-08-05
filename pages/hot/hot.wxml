@@ -1,6 +1,6 @@
 <loading hidden="{{loadingHidden}}">正在加载...</loading>
 
-<scroll-view scroll-y="true" bindscrolltolower="bindscrolltolower" style="height: 100%">
+<scroll-view scroll-y="true" lower-threshold="200" style="height: 100%" bindscrolltolower="bindscrolltolower" >
   <block wx:for-items="{{list}}">
     <!-- 分割线 -->
     <view class="divLine"></view>
@@ -17,24 +17,25 @@
       <text style="font-size: 35rpx">{{item.text}}</text>
       <!-- 视频组件 -->
       <view class="content-multimedia" hidden="{{item.videouri ? false : true}}">
-      <video id="{{item.id}}" src="{{item.videouri}}" bindplay="videoPlay" bindended="videoEndPlay" catchtap="tapVideo" style="width:{{item.width}}rpx;height:{{item.height}}rpx;" ></video>
+      <video id="{{item.id}}" src="{{item.videouri}}" bindplay="videoPlay" bindended="videoEndPlay" catchtap="tapVideo" style="justify-content: center;width:{{item.width}}rpx;height:{{item.height}}rpx;" >
+      </video>
       </view>
       <!-- 底部view样式 -->
       <view class="bottomView">
         <view class="bottomItemView">
-          <image class="bottomItemImage" src="../../image/ding.png" />
+          <image id="{{item.id}}" class="bottomItemImage" src="../../image/ding.png" catchtap="zanEvent"/>
           <text class="bottomItemText">{{item.ding}}</text>
         </view>
         <view class="bottomItemView">
-          <image class="bottomItemImage" src="../../image/cai.png" />
+          <image id="{{item.id}}" class="bottomItemImage" src="../../image/cai.png" catchtap="caiEvent"/>
           <text class="bottomItemText">{{item.cai}}</text>
         </view>
         <view class="bottomItemView">
-          <image class="bottomItemImage" src="../../image/share.png" />
+          <image id="{{item.id}}" class="bottomItemImage" src="../../image/share.png" catchtap="shareEvent"/>
           <text class="bottomItemText">{{item.repost}}</text>
         </view>
         <view class="bottomItemView">
-          <image class="bottomItemImage" src="../../image/comment.png" />
+          <image id="{{item.id}}" class="bottomItemImage" src="../../image/comment.png" catchtap="commentEvent"/>
           <text class="bottomItemText">{{item.comment}}</text>
         </view>
       </view>

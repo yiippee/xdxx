@@ -1,13 +1,15 @@
 const util = require("../../utils/util.js");
 //获取应用实例
 var app = getApp()
+var page = 1;//页码
 
 Page({
   data: {
     list: [],
     maxtime: '',
     loadingHidden: false,
-    userInfo: ''
+    userInfo: '',
+    type: 29
   },
   onLoad: function (options) {
     var that = this
@@ -43,14 +45,14 @@ Page({
     this.requestData('list');
   },
 
-    //加载更多操作
-    loadMoreData: function () {
+  //加载更多操作
+  loadMoreData: function () {
         console.log("加载更多");
         //加载提示框
         util.showLoading();
 
         var that = this;
-        var parameters = 'a=list&c=data&type=' + types[this.data.currentTopItem] + "&page=" + (page + 1) + "&maxtime=" + this.getMaxtime();
+        var parameters = 'a=list&c=data&type=' + this.type + "&page=" + (page + 1) + "&maxtime=" + this.getMaxtime();
         console.log("parameters = " + parameters);
         util.request(parameters, function (res) {
             page += 1;
@@ -129,7 +131,8 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function () {
-
+        console.log("---触及底部刷新---")
+        this.loadMoreData()
     },
 
     //点击赞按钮。图片上面添加catchtap事件就可以调用点击事件了。感觉所有的组件都有这个catchtap属性，不会上抛事件。
